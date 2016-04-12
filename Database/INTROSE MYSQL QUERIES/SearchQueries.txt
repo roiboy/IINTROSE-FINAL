@@ -1,0 +1,95 @@
+
+//customer_inspection_results
+"SELECT * FROM customer_inspection_results " +
+" WHERE invoiceItemID LIKE '" + input +
+"' OR approvedQuantity LIKE '" + input +
+"' OR rejectedQuantity LIKE '" + input + "'";
+
+//purchaseordercontrol.customer_order_items
+"SELECT * FROM customer_order_items " +
+" WHERE customerOrderID LIKE '"+input+
+"' OR customerPONumber LIKE '"+input+
+"' OR itemNumber LIKE '"+input+
+"' OR quantity LIKE '"+input+
+"' OR currency LIKE '"+input+
+"' OR itemDescription LIKE '" +input+
+"' OR pricePerUnit LIKE '"+input+
+"' OR totalPrice LIKE '"+input+
+"' OR isFinished LIKE '"+input+"'";
+
+//customer_po
+"SELECT * FROM customer_po " +
+"WHERE customerPONumber LIKE '"+input+
+"' OR customerName LIKE '"+input+
+"' OR dateIssued LIKE '"+input+
+"' OR expectedDeliveryDate LIKE '"+input+
+"' OR isFinished LIKE '"+input+"'";
+
+//customers
+"SELECT * FROM customers " +
+"WHERE customerName LIKE '"+input+"'";
+
+//delivered_items
+"SELECT * FROM delivered_items "+
+"WHERE deliveryItemID LIKE '"+input+
+"' OR deliveryReceiptNumber LIKE '"+input+
+"' OR supplierOrderID LIKE '"+input+
+"' OR deliveredQuantity LIKE '"+input+"'";
+
+//delivery_receipts
+"SELECT * FROM delivery_receipts "+
+"WHERE deliveryReceiptNumber LIKE '"+input+
+"' OR supplierPONumber LIKE '"+input+
+"' OR daeReceived LIKE '"+input+"'";
+
+//godo_insppection_results
+"SELECT * FROM godo_inspection_results "+
+"WHERE deliveryItemID LIKE '"+input+
+"' OR approvedQuantity LIKE '"+input+
+"' OR rejectedQuantity LIKE '"+input+"'";
+
+//invoice_items
+"SELECT * FROM invoice_items "+
+"WHERE invoiceItemID LIKE '"+input+
+"' OR deliveryItemID LIKE '"+input+
+"' OR invoiceNumber LIKE '"+input+
+"' OR customerOrderID LIKE '"+input+
+"' OR deliveredquantity LIKE '"+input+"'";
+
+//invoices
+"SELECT * FROM invoices "+
+"WHERE invoiceNumber LIKE '"+input+
+"' OR deliveryReceiptNumber LIKE '"+input+
+"' OR customerPONumber LIKE '"+input+
+"' OR dateReceived LIKE '"+input+
+"' OR invoiceTotalPrice LIKE '"+input+"'";
+
+//items
+"SELECT * FROM items "+
+"WHERE itemNumber LIKE '"+input+
+"' OR supplierName LIKE '"+input+
+"' OR description LIKE '"+input+"'";
+
+//supplier_order_items
+"SELECT * FROM supplier_order_items "+
+"WHERE supplierOrderID LIKE '"+input+
+"' OR supplierPONumber LIKE '"+input+
+"' OR itemNumber LIKE '"+input+
+"' OR quantity LIKE '"+input+
+"' OR currency LIKE '"+input+
+"' OR pricePerUnit LIKE '"+input+
+"' OR totalPrice LIKE '"+input+
+"' OR isFinished LIKE '"+input+"'";
+
+//supplier_po
+"SELECT * FROM supplier_po "+
+"WHERE supplierPONumber LIKE '"+input+
+"' OR customerPONumber LIKE '"+input+
+"' OR supplierName LIKE '"+input+
+"' OR dateIssued LIKE '"+input+
+"' OR expectedDeliveryDate LIKE '"+input+
+"' OR isFinished LIKE '"+input+"'";
+
+//suppliers
+"SELECT * FROM suppliers "+
+"WHERE supplierName LIKE '"+input+"'";
